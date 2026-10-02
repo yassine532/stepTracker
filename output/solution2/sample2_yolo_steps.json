@@ -1,90 +1,349 @@
 {
   "solution": "Solution 2: Edge-Native YOLOv8-Pose Kinematics",
-  "video_name": "sample2.mp4",
-  "total_steps": 11,
-  "left_steps": 6,
-  "right_steps": 5,
-  "cadence_spm": 132.0,
-  "duration_sec": 5.0,
-  "runtime_sec": 3.3,
-  "fps_processing": 45.5,
+  "video_name": "anis_sideways.mp4",
+  "total_steps": 48,
+  "left_steps": 18,
+  "right_steps": 30,
+  "cadence_spm": 57.62,
+  "duration_sec": 49.983266666666665,
+  "runtime_sec": 21.37,
+  "fps_processing": 70.1,
   "steps": [
     {
-      "frame": 7,
-      "timestamp_sec": 0.233,
-      "leg": "right",
+      "frame": 17,
+      "timestamp_sec": 0.567,
+      "leg": "left",
       "step_id": 1,
-      "time_str": "00:00.23"
+      "time_str": "00:00.57"
     },
     {
-      "frame": 21,
-      "timestamp_sec": 0.7,
+      "frame": 63,
+      "timestamp_sec": 2.102,
       "leg": "left",
       "step_id": 2,
-      "time_str": "00:00.70"
+      "time_str": "00:02.10"
     },
     {
-      "frame": 32,
-      "timestamp_sec": 1.067,
-      "leg": "right",
+      "frame": 92,
+      "timestamp_sec": 3.07,
+      "leg": "left",
       "step_id": 3,
-      "time_str": "00:01.07"
+      "time_str": "00:03.07"
     },
     {
-      "frame": 46,
-      "timestamp_sec": 1.533,
-      "leg": "left",
+      "frame": 115,
+      "timestamp_sec": 3.837,
+      "leg": "right",
       "step_id": 4,
-      "time_str": "00:01.53"
+      "time_str": "00:03.84"
     },
     {
-      "frame": 57,
-      "timestamp_sec": 1.9,
-      "leg": "right",
+      "frame": 140,
+      "timestamp_sec": 4.671,
+      "leg": "left",
       "step_id": 5,
-      "time_str": "00:01.90"
+      "time_str": "00:04.67"
     },
     {
-      "frame": 71,
-      "timestamp_sec": 2.367,
-      "leg": "left",
+      "frame": 158,
+      "timestamp_sec": 5.272,
+      "leg": "right",
       "step_id": 6,
-      "time_str": "00:02.37"
+      "time_str": "00:05.27"
     },
     {
-      "frame": 85,
-      "timestamp_sec": 2.833,
-      "leg": "right",
-      "step_id": 7,
-      "time_str": "00:02.83"
-    },
-    {
-      "frame": 99,
-      "timestamp_sec": 3.3,
+      "frame": 183,
+      "timestamp_sec": 6.106,
       "leg": "left",
-      "step_id": 8,
-      "time_str": "00:03.30"
+      "step_id": 7,
+      "time_str": "00:06.11"
     },
     {
-      "frame": 110,
-      "timestamp_sec": 3.667,
+      "frame": 203,
+      "timestamp_sec": 6.773,
       "leg": "right",
-      "step_id": 9,
-      "time_str": "00:03.67"
+      "step_id": 8,
+      "time_str": "00:06.77"
     },
     {
-      "frame": 125,
-      "timestamp_sec": 4.167,
+      "frame": 223,
+      "timestamp_sec": 7.441,
+      "leg": "left",
+      "step_id": 9,
+      "time_str": "00:07.44"
+    },
+    {
+      "frame": 249,
+      "timestamp_sec": 8.308,
       "leg": "left",
       "step_id": 10,
-      "time_str": "00:04.17"
+      "time_str": "00:08.31"
     },
     {
-      "frame": 139,
-      "timestamp_sec": 4.633,
+      "frame": 277,
+      "timestamp_sec": 9.243,
       "leg": "left",
       "step_id": 11,
-      "time_str": "00:04.63"
+      "time_str": "00:09.24"
+    },
+    {
+      "frame": 298,
+      "timestamp_sec": 9.943,
+      "leg": "right",
+      "step_id": 12,
+      "time_str": "00:09.94"
+    },
+    {
+      "frame": 321,
+      "timestamp_sec": 10.711,
+      "leg": "left",
+      "step_id": 13,
+      "time_str": "00:10.71"
+    },
+    {
+      "frame": 344,
+      "timestamp_sec": 11.478,
+      "leg": "right",
+      "step_id": 14,
+      "time_str": "00:11.48"
+    },
+    {
+      "frame": 370,
+      "timestamp_sec": 12.346,
+      "leg": "left",
+      "step_id": 15,
+      "time_str": "00:12.35"
+    },
+    {
+      "frame": 387,
+      "timestamp_sec": 12.913,
+      "leg": "right",
+      "step_id": 16,
+      "time_str": "00:12.91"
+    },
+    {
+      "frame": 407,
+      "timestamp_sec": 13.58,
+      "leg": "left",
+      "step_id": 17,
+      "time_str": "00:13.58"
+    },
+    {
+      "frame": 424,
+      "timestamp_sec": 14.147,
+      "leg": "right",
+      "step_id": 18,
+      "time_str": "00:14.15"
+    },
+    {
+      "frame": 463,
+      "timestamp_sec": 15.449,
+      "leg": "right",
+      "step_id": 19,
+      "time_str": "00:15.45"
+    },
+    {
+      "frame": 478,
+      "timestamp_sec": 15.949,
+      "leg": "left",
+      "step_id": 20,
+      "time_str": "00:15.95"
+    },
+    {
+      "frame": 512,
+      "timestamp_sec": 17.084,
+      "leg": "right",
+      "step_id": 21,
+      "time_str": "00:17.08"
+    },
+    {
+      "frame": 525,
+      "timestamp_sec": 17.518,
+      "leg": "left",
+      "step_id": 22,
+      "time_str": "00:17.52"
+    },
+    {
+      "frame": 559,
+      "timestamp_sec": 18.652,
+      "leg": "right",
+      "step_id": 23,
+      "time_str": "00:18.65"
+    },
+    {
+      "frame": 577,
+      "timestamp_sec": 19.253,
+      "leg": "left",
+      "step_id": 24,
+      "time_str": "00:19.25"
+    },
+    {
+      "frame": 610,
+      "timestamp_sec": 20.354,
+      "leg": "right",
+      "step_id": 25,
+      "time_str": "00:20.35"
+    },
+    {
+      "frame": 624,
+      "timestamp_sec": 20.821,
+      "leg": "left",
+      "step_id": 26,
+      "time_str": "00:20.82"
+    },
+    {
+      "frame": 657,
+      "timestamp_sec": 21.922,
+      "leg": "right",
+      "step_id": 27,
+      "time_str": "00:21.92"
+    },
+    {
+      "frame": 673,
+      "timestamp_sec": 22.456,
+      "leg": "left",
+      "step_id": 28,
+      "time_str": "00:22.46"
+    },
+    {
+      "frame": 709,
+      "timestamp_sec": 23.657,
+      "leg": "right",
+      "step_id": 29,
+      "time_str": "00:23.66"
+    },
+    {
+      "frame": 752,
+      "timestamp_sec": 25.092,
+      "leg": "right",
+      "step_id": 30,
+      "time_str": "00:25.09"
+    },
+    {
+      "frame": 796,
+      "timestamp_sec": 26.56,
+      "leg": "right",
+      "step_id": 31,
+      "time_str": "00:26.56"
+    },
+    {
+      "frame": 844,
+      "timestamp_sec": 28.161,
+      "leg": "right",
+      "step_id": 32,
+      "time_str": "00:28.16"
+    },
+    {
+      "frame": 891,
+      "timestamp_sec": 29.73,
+      "leg": "right",
+      "step_id": 33,
+      "time_str": "00:29.73"
+    },
+    {
+      "frame": 938,
+      "timestamp_sec": 31.298,
+      "leg": "right",
+      "step_id": 34,
+      "time_str": "00:31.30"
+    },
+    {
+      "frame": 978,
+      "timestamp_sec": 32.633,
+      "leg": "right",
+      "step_id": 35,
+      "time_str": "00:32.63"
+    },
+    {
+      "frame": 993,
+      "timestamp_sec": 33.133,
+      "leg": "left",
+      "step_id": 36,
+      "time_str": "00:33.13"
+    },
+    {
+      "frame": 1029,
+      "timestamp_sec": 34.334,
+      "leg": "right",
+      "step_id": 37,
+      "time_str": "00:34.33"
+    },
+    {
+      "frame": 1066,
+      "timestamp_sec": 35.569,
+      "leg": "right",
+      "step_id": 38,
+      "time_str": "00:35.57"
+    },
+    {
+      "frame": 1089,
+      "timestamp_sec": 36.336,
+      "leg": "left",
+      "step_id": 39,
+      "time_str": "00:36.34"
+    },
+    {
+      "frame": 1120,
+      "timestamp_sec": 37.371,
+      "leg": "right",
+      "step_id": 40,
+      "time_str": "00:37.37"
+    },
+    {
+      "frame": 1165,
+      "timestamp_sec": 38.872,
+      "leg": "right",
+      "step_id": 41,
+      "time_str": "00:38.87"
+    },
+    {
+      "frame": 1210,
+      "timestamp_sec": 40.374,
+      "leg": "right",
+      "step_id": 42,
+      "time_str": "00:40.37"
+    },
+    {
+      "frame": 1256,
+      "timestamp_sec": 41.909,
+      "leg": "right",
+      "step_id": 43,
+      "time_str": "00:41.91"
+    },
+    {
+      "frame": 1297,
+      "timestamp_sec": 43.277,
+      "leg": "right",
+      "step_id": 44,
+      "time_str": "00:43.28"
+    },
+    {
+      "frame": 1347,
+      "timestamp_sec": 44.945,
+      "leg": "right",
+      "step_id": 45,
+      "time_str": "00:44.95"
+    },
+    {
+      "frame": 1393,
+      "timestamp_sec": 46.48,
+      "leg": "right",
+      "step_id": 46,
+      "time_str": "00:46.48"
+    },
+    {
+      "frame": 1438,
+      "timestamp_sec": 47.981,
+      "leg": "right",
+      "step_id": 47,
+      "time_str": "00:47.98"
+    },
+    {
+      "frame": 1475,
+      "timestamp_sec": 49.216,
+      "leg": "right",
+      "step_id": 48,
+      "time_str": "00:49.22"
     }
   ]
 }

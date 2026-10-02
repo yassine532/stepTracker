@@ -129,6 +129,13 @@ Examples:
                         help="Render annotated video with real-time HUD telemetry")
     parser.add_argument("--benchmark", action="store_true",
                         help="Run multi-solution performance and latency benchmark")
+    parser.add_argument("--pick-roi", action="store_true",
+                        help="Drag the tread ROI box on a video frame before running (solution 3)")
+    parser.add_argument("--pick-at", type=float, default=0.0,
+                        help="Second of the video to show when picking the ROI (default: 0)")
+    parser.add_argument("--roi", type=float, nargs=4, metavar=("X1", "Y1", "X2", "Y2"),
+                        help="Manual normalized ROI for solution 3 (skips auto-selection)")
+    
 
     args = parser.parse_args()
 
@@ -150,8 +157,13 @@ Examples:
         )
     elif args.solution == "3":
         from src.solution3.pipeline import run_solution3
+        roi = tuple(args.roi) if args.roi else None
+        if args.pick_roi:
+            from tools.pick_roi import pick_roi
+            roi = pick_roi(video_path, args.pick_at)
         out_json = BASE_DIR / "output" / "solution3" / f"sample{args.sample}_machine_steps.json"
-        run_solution3(video_path=video_path, output_json=out_json, max_duration_sec=args.duration)
+        run_solution3(video_path=video_path, output_json=out_json,
+                      max_duration_sec=args.duration, roi=roi)
         if args.save_video:
             from src.solution3.video_annotator import render_solution3_annotated_video
             render_solution3_annotated_video(

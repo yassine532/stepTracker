@@ -1,0 +1,83 @@
+{
+  "solution": "Solution 2: Edge-Native YOLOv8-Pose Kinematics",
+  "video_name": "sample2_5s_annotated.mp4",
+  "total_steps": 10,
+  "left_steps": 5,
+  "right_steps": 5,
+  "cadence_spm": 120.0,
+  "duration_sec": 5.0,
+  "runtime_sec": 3.24,
+  "fps_processing": 46.3,
+  "steps": [
+    {
+      "frame": 7,
+      "timestamp_sec": 0.233,
+      "leg": "right",
+      "step_id": 1,
+      "time_str": "00:00.23"
+    },
+    {
+      "frame": 15,
+      "timestamp_sec": 0.5,
+      "leg": "left",
+      "step_id": 2,
+      "time_str": "00:00.50"
+    },
+    {
+      "frame": 32,
+      "timestamp_sec": 1.067,
+      "leg": "right",
+      "step_id": 3,
+      "time_str": "00:01.07"
+    },
+    {
+      "frame": 46,
+      "timestamp_sec": 1.533,
+      "leg": "left",
+      "step_id": 4,
+      "time_str": "00:01.53"
+    },
+    {
+      "frame": 58,
+      "timestamp_sec": 1.933,
+      "leg": "right",
+      "step_id": 5,
+      "time_str": "00:01.93"
+    },
+    {
+      "frame": 67,
+      "timestamp_sec": 2.233,
+      "leg": "left",
+      "step_id": 6,
+      "time_str": "00:02.23"
+    },
+    {
+      "frame": 86,
+      "timestamp_sec": 2.867,
+      "leg": "right",
+      "step_id": 7,
+      "time_str": "00:02.87"
+    },
+    {
+      "frame": 98,
+      "timestamp_sec": 3.267,
+      "leg": "left",
+      "step_id": 8,
+      "time_str": "00:03.27"
+    },
+    {
+      "frame": 111,
+      "timestamp_sec": 3.7,
+      "leg": "right",
+      "step_id": 9,
+      "time_str": "00:03.70"
+    },
+    {
+      "frame": 124,
+      "timestamp_sec": 4.133,
+      "leg": "left",
+      "step_id": 10,
+      "time_str": "00:04.13"
+    }
+  ]
+}
