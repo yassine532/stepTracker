@@ -18,6 +18,110 @@ OUTPUT_DIR = BASE_DIR / "output" / "solution3"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 
+def analyze_step_intervals(
+    steps,
+    duration_sec,
+    window_sizes=(2, 3, 5, 10),
+):
+    """
+    Analyze detected step counts inside fixed time windows.
+
+    The goal is to identify time intervals where the step detector
+    behaves abnormally compared with the typical step count.
+    """
+
+    timestamps = sorted(
+        float(step["timestamp_sec"])
+        for step in steps
+        if "timestamp_sec" in step
+    )
+
+    result = {}
+
+    for window_size in window_sizes:
+        intervals = []
+
+        n_windows = int((duration_sec + window_size - 1) // window_size)
+
+        counts = []
+
+        for i in range(n_windows):
+            start_sec = i * window_size
+            end_sec = min(start_sec + window_size, duration_sec)
+
+            count = sum(
+                1
+                for ts in timestamps
+                if start_sec <= ts < end_sec
+            )
+
+            counts.append(count)
+
+        # Typical number of detected steps for this window size.
+        # Median is used because it is less affected by abnormal intervals.
+        if counts:
+            sorted_counts = sorted(counts)
+            middle = len(sorted_counts) // 2
+
+            if len(sorted_counts) % 2 == 0:
+                typical_count = (
+                    sorted_counts[middle - 1] + sorted_counts[middle]
+                ) / 2
+            else:
+                typical_count = sorted_counts[middle]
+        else:
+            typical_count = 0
+
+        for i, count in enumerate(counts):
+            start_sec = i * window_size
+            end_sec = min(start_sec + window_size, duration_sec)
+
+            suspicious = False
+            reason = None
+
+            if typical_count > 0:
+
+                # No detected steps in an interval is highly suspicious.
+                if count == 0:
+                    suspicious = True
+                    reason = "zero_detected_steps"
+
+                # Large drop compared with the normal interval.
+                elif count < typical_count * 0.5:
+                    suspicious = True
+                    reason = "large_drop_in_detected_steps"
+
+            intervals.append({
+                "interval_id": i,
+                "start_sec": round(start_sec, 3),
+                "end_sec": round(end_sec, 3),
+                "duration_sec": round(end_sec - start_sec, 3),
+                "detected_steps": count,
+                "typical_steps": typical_count,
+                "deviation_from_typical": round(
+                    count - typical_count, 3
+                ),
+                "suspicious": suspicious,
+                "reason": reason,
+            })
+
+        suspicious_count = sum(
+            1
+            for interval in intervals
+            if interval["suspicious"]
+        )
+
+        result[f"{window_size}_sec"] = {
+            "window_size_sec": window_size,
+            "typical_steps_per_window": typical_count,
+            "total_windows": len(intervals),
+            "suspicious_windows": suspicious_count,
+            "intervals": intervals,
+        }
+
+    return result
+
+
 def run_solution3(video_path: Path, output_json: Path, max_duration_sec: float = None, roi=None):
     tracker = MachineStepTracker()
     start_time = time.time()
@@ -47,6 +151,11 @@ def run_solution3(video_path: Path, output_json: Path, max_duration_sec: float =
     runtime = round(time.time() - start_time, 3)
     res["solution"] = "Solution 3: Physical Machine Step Tracker (Kymograph)"
     res["runtime_sec"] = runtime
+    res["interval_analysis"] = analyze_step_intervals(
+        steps=res["steps"],
+        duration_sec=res["duration_sec"],
+        window_sizes=(2, 3, 5, 10),
+    )
 
     table = Table(title=f"⚙️ Solution 3 (Physical Machine Steps): {video_path.name}", border_style="green")
     table.add_column("Step #", style="bold white", width=8)
